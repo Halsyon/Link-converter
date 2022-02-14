@@ -10,6 +10,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 //@RequestMapping() /convert
+
+/**
+ * 3. Регистрация URL.
+ *
+ * Поле того, как пользователь зарегистрировал свой сайт
+ * он может отправлять на сайт ссылки и получать преобразованные ссылки.
+ */
 @RestController
 public class RegUrlLink {
 

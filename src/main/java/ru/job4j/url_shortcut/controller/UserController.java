@@ -23,10 +23,12 @@ public class UserController {
         this.encoder = encoder;
     }
 
-    @PostMapping("/sign-up")
+//    @PostMapping("/sign-up")
+@PostMapping("/registration")
     public void signUp(@RequestBody Person person) {
         person.setPassword(encoder.encode(person.getPassword()));
         users.save(person);
+
     }
 
     @GetMapping("/all")

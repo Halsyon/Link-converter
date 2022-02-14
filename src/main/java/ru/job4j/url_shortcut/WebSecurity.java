@@ -27,7 +27,10 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         this.userDetailsService = userDetailsService;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
-
+/*
+было .antMatchers(HttpMethod.POST, SIGN_UP_URL).permitAll()
+стало /registration
+ */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable().authorizeRequests()
