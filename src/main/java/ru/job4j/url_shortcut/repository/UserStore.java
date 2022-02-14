@@ -11,8 +11,11 @@ import java.util.concurrent.ConcurrentHashMap;
 public class UserStore {
     private final ConcurrentHashMap<String, Person> users = new ConcurrentHashMap<>();
 
-    public void save(Person person) {
+    public Person save(Person person) {
+        person.setStatus(true);
         users.put(person.getUsername(), person);
+        System.out.println("PERSON SAVE : " + person);
+        return person;
     }
 
 

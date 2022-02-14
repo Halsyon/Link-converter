@@ -8,10 +8,10 @@ import lombok.Data;
  * то есть сайт уже есть в системе.
  */
 @Data
-public class Registration {
+public class RegstrnStatus {
 
     private int id;
-    private boolean status;
+    private boolean registration;
     private String login;
     private String password;
 
