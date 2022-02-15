@@ -10,7 +10,6 @@ import lombok.Data;
 @Data
 public class RegstrnStatus {
 
-    private int id;
     private boolean registration;
     private String login;
     private String password;

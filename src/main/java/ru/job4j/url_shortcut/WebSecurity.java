@@ -15,26 +15,31 @@ import ru.job4j.url_shortcut.filter.JWTAuthenticationFilter;
 import ru.job4j.url_shortcut.filter.JWTAuthorizationFilter;
 import ru.job4j.url_shortcut.service.UserDetailsServiceImpl;
 
+import static ru.job4j.url_shortcut.filter.JWTAuthenticationFilter.CONVERT_URL;
 import static ru.job4j.url_shortcut.filter.JWTAuthenticationFilter.SIGN_UP_URL;
 
-
+/**
+ * -@EnableWebSecurity c целью активизировать безопасный режим работы в веб-приложении Спринг
+ */
 @EnableWebSecurity
 public class WebSecurity extends WebSecurityConfigurerAdapter {
     private UserDetailsServiceImpl userDetailsService;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    public WebSecurity(UserDetailsServiceImpl userDetailsService, BCryptPasswordEncoder bCryptPasswordEncoder) {
+    public WebSecurity(UserDetailsServiceImpl userDetailsService,
+                       BCryptPasswordEncoder bCryptPasswordEncoder) {
         this.userDetailsService = userDetailsService;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
-/*
-было .antMatchers(HttpMethod.POST, SIGN_UP_URL).permitAll()
-стало /registration
- */
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.cors().and().csrf().disable().authorizeRequests()
-                .antMatchers(HttpMethod.POST, SIGN_UP_URL).permitAll()
+        http.cors().and().csrf().disable()
+                .authorizeRequests()
+                .antMatchers(HttpMethod.GET, CONVERT_URL)
+                .permitAll()
+                .antMatchers(HttpMethod.POST, SIGN_UP_URL)
+                .permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilter(new JWTAuthenticationFilter(authenticationManager()))

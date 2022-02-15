@@ -2,7 +2,6 @@ package ru.job4j.url_shortcut.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import ru.job4j.url_shortcut.model.dto.Url;
 
 import javax.persistence.*;
 import java.util.HashSet;

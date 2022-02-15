@@ -21,20 +21,18 @@ import java.util.Date;
 import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 
 /**
- * JWT - Java web token.
- *
+ * JSON Web Tokens (JWT)
+ * <p>
  * По аналогии с servlet создаем фильтр, который отлавливает пользователя.
  */
-public class JWTAuthenticationFilter  extends UsernamePasswordAuthenticationFilter {
+public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
     public static final String SECRET = "SecretKeyToGenJWTs";
     public static final long EXPIRATION_TIME = 864_000_000; /* 10 days */
     public static final String TOKEN_PREFIX = "Bearer ";
     public static final String HEADER_STRING = "Authorization";
-    public static final String SIGN_UP_URL = "/users/registration"; /* /registration*/
-    /*
-    было .public static final String SIGN_UP_URL = "/users/sign-up";
-    стало public static final String SIGN_UP_URL = "/users/registration"; /registration
-     */
+    public static final String SIGN_UP_URL = "/registration"; /* /registration*/
+    public static final String CONVERT_URL = "/redirect/**";
+
     private AuthenticationManager auth;
 
     public JWTAuthenticationFilter(AuthenticationManager auth) {

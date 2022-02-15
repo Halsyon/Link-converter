@@ -1,8 +1,7 @@
-package ru.job4j.url_shortcut.model.dto;
+package ru.job4j.url_shortcut.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import ru.job4j.url_shortcut.model.Person;
 
 import javax.persistence.*;
 
@@ -16,19 +15,15 @@ import javax.persistence.*;
 @Table(name = "url")
 public class Url {
 
-    //    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @EqualsAndHashCode.Include
-//    private Integer id;
     @Id
+    @EqualsAndHashCode.Include
     @Column(name = "encode_url")
     private String encodeUrl;
 
     @Column(name = "address_url")
     private String addressUrl;
 
-//    @GeneratedValue(strategy = GenerationType.SEQUENCE) //В сервисе считается количество вызовов каждого адреса.?
-   @Version
+    @Version
     @Column(name = "total")
     private Integer total;
 
