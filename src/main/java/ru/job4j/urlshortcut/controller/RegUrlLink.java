@@ -63,17 +63,14 @@ public class RegUrlLink {
      */
     @PostMapping("/convert")
     public ResponseEntity<Code> createConvert(@RequestBody Link link) {
-        System.out.println("Что пришло : " + link);
         if (link.getUrl() == null) {
-            throw new NullPointerException("Person id mustn't be empty"); // TODO
+            throw new NullPointerException("Person id mustn't be empty");
         }
 
         var holder = SecurityContextHolder
                 .getContext()
                 .getAuthentication()
                 .getPrincipal();
-        System.out.println("кто сейчас Юзер : " + holder);
-        System.out.println(link.getUrl());
 
         UrlValidator urlValidator = new UrlValidator(
                 new String[]{"http", "https"}
@@ -81,8 +78,6 @@ public class RegUrlLink {
         String url = link.getUrl();
         if (urlValidator.isValid(url)) {
             var id = urlService.encodeLink(url);
-            System.out.println("Id generated :" + id);
-
             var u = urlService.save(urlService.putAddressAndUrl(url, id));
             personService.addUrl(holder.toString(), u);
             return new ResponseEntity<>(Code.of(id), HttpStatus.OK);

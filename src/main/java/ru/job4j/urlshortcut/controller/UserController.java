@@ -9,6 +9,7 @@ import ru.job4j.urlshortcut.model.Person;
 
 import ru.job4j.urlshortcut.service.PersonService;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -46,8 +47,7 @@ public class UserController {
     }
 
     @PutMapping("/")
-//    @Validated(Operation.OnUpdate.class)    + update(@Valid @RequestBody Person person) { TODO
-    public ResponseEntity<Void> update(@RequestBody Person person) {
+    public ResponseEntity<Void> update(@Valid @RequestBody Person person) {
         if (person.getUsername().isEmpty() || person.getPassword() == null) {
             throw new NullPointerException("Person username and password mustn't be empty!");
         }

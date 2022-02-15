@@ -39,6 +39,7 @@ public class UrlService {
 
     /**
      * можно получить статистку всех адресов и количество вызовов этого адреса.
+     *
      * @return
      */
     public List<UrlStatistic> findAllStatistic() {
@@ -50,6 +51,7 @@ public class UrlService {
 
     /**
      * найти ссылку по ключу
+     *
      * @param id
      * @return
      */
@@ -60,31 +62,25 @@ public class UrlService {
             var t = (url.getTotal() + 1);
             url.setTotal(t);
             var p = urlRepo.save(url);
-            System.out.println("что после обновления тотал " + p);
         }
         return Optional.of(url);
     }
 
     /**
      * шифрование ссылки
+     *
      * @param url
      * @return
      */
     public String encodeLink(String url) {
         String id = null;
-//        Url urlEnc = new Url();
+
         UrlValidator urlValidator = new UrlValidator(
                 new String[]{"http", "https"}
         );
-//        String url = link.getUrl(); //****TODO
+
         if (urlValidator.isValid(url)) {
             id = Hashing.murmur3_32().hashString(url, StandardCharsets.UTF_8).toString();
-//            stringMap.put(id, url);
-            System.out.println("Id generated :" + id);
-//            urlEnc.setAddressUrl(url);
-//            urlEnc.setEncodeUrl(id);
-//            var u = urlRepo.save(urlEnc);
-//            var p = personService.addUrl(holder.toString(), u);
         }
         return id;
     }
