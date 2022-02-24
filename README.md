@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.com/SlartiBartFast-art/job4j_tracker.svg?branch=master)](https://travis-ci.com/SlartiBartFast-art/job4j_tracker)
-
+[![Build Status](https://app.travis-ci.com/SlartiBartFast-art/job4j_url_shortcut.svg?branch=master)](https://app.travis-ci.com/SlartiBartFast-art/job4j_url_shortcut)
 
 # url_shortcut
 
@@ -10,7 +9,7 @@
  
 Сервис работает через REST API.
 
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_tracker/blob/master/image/Screenshot_1.jpg)
+![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_1.jpg)
 
 
 Сервис позволяет обеспечить безопасность пользователей на сайте,
@@ -30,7 +29,7 @@ ______________________________________________
 - Spring Boot Web
 - Spring Boot Tomcat
 - Maven
-Travis C.I.
+- Travis C.I.
 
 В приложении будет несколько запросов, функционал:
 
@@ -42,11 +41,11 @@ URL
 
 POST /registration
 в случае если пользователь регистрируется впервые
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_tracker/blob/master/image/Screenshot_2.jpg)
+![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_2.jpg)
 
 Ответ от сервера, в случае если такой пользователь уже существует
 
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_tracker/blob/master/image/Screenshot_3.jpg)
+![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_3.jpg)
 
 2. Авторизация.
 
@@ -55,7 +54,7 @@ POST /registration
 
 Этот ключ возвращается в блоке HEAD.
 
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_tracker/blob/master/image/Screenshot_4.jpg)
+![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_4.jpg)
 
 3. Регистрация URL.
 
@@ -65,7 +64,7 @@ POST /registration
 Отправляем URL. POST /convert
 Получаем. Ответ от сервера - уникальный код.
 
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_tracker/blob/master/image/Screenshot_5.jpg)
+![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_5.jpg)
 
 Ключ 4b7a2a11 ассоциирован с URL в БД
 
@@ -76,19 +75,19 @@ POST /registration
 
 GET /redirect/УНИКАЛЬНЫЙ_КОД
 
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_tracker/blob/master/image/Screenshot_6.jpg)
+![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_6.jpg)
 
 5. Статистика.
 
 В сервисе считается количество вызовов каждого адреса.
-
 По сайту можно получить статистку всех адресов и количество вызовов этого адреса.
 
-Опишем вызовы. GET /statistic
-
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_tracker/blob/master/image/Screenshot_1.jpg)
-
+вызов. GET /statistic
 Ответ от сервера JSON.
+
+![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_7.jpg)
+
+
 
 
 
