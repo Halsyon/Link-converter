@@ -1,4 +1,5 @@
 [![Build Status](https://app.travis-ci.com/SlartiBartFast-art/job4j_url_shortcut.svg?branch=master)](https://app.travis-ci.com/SlartiBartFast-art/job4j_url_shortcut)
+![GitHub top language](https://img.shields.io/github/languages/top/SlartiBartFast-art/job4j_url_shortcut?logo=github&logoColor=green)
 
 # url_shortcut
 
