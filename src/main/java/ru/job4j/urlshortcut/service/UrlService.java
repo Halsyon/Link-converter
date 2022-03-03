@@ -57,11 +57,8 @@ public class UrlService {
      */
     public Optional<Url> finById(String id) {
         var url = urlRepo.findById(id).orElse(new Url());
-
         if (url.getEncodeUrl() != null) {
-            var t = (url.getTotal() + 1);
-            url.setTotal(t);
-            var p = urlRepo.save(url);
+            urlRepo.setTotal(1, id);
         }
         return Optional.of(url);
     }
