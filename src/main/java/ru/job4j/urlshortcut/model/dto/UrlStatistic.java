@@ -3,7 +3,7 @@ package ru.job4j.urlshortcut.model.dto;
 import lombok.Data;
 
 /**
- * Объект DTO бля предоставления статиски по колличество запросов по определенной строке
+ * Объект DTO бля предоставления статистки по колличество запросов по определенной строке
  */
 @Data
 public class UrlStatistic {

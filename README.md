@@ -19,7 +19,7 @@
 Сервис позволяет обеспечить безопасность пользователей на сайте,
 за счет замены обычных ссылок на конвертированные.
 Также проект, позволяет для зарегистрированных в системе сервисом/пользователей производить просмотр
-собрнной статистики посещений страниц различных сайтов,
+собранной статистики посещений страниц различных сайтов,
 
 Это веб-приложение реализует поле сайта с использованием принципа архитектуры RESTfull.
 
@@ -32,8 +32,14 @@ ______________________________________________
 - Spring Boot Data JPA
 - Spring Boot Web
 - Spring Boot Tomcat
+- PostgreSQl  
 - Maven
 - Travis C.I.
+-----
+
+![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_9.jpg)
+
+![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_8.jpg)
 
 В приложении будет несколько запросов, функционал:
 

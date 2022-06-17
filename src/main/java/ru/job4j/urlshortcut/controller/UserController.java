@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 /**
- * Сделаем контроллер для регистрации пользователя и получения списках всех пользователей системы.
+ * Контроллер для регистрации пользователя и получения списках всех пользователей системы.
  */
 @RestController
 @RequestMapping("/users")

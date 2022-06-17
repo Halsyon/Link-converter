@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 /**
- * аннотация @ControllerAdvise используемая совместно с @ExceptionHandler.
+ * -@ControllerAdvise используемая совместно с @ExceptionHandler.
  * Код ниже обрабатывает все исключения NullPointerException, которые возникают во всех контроллерах:
  * Обработка исключений возникающих во многих контроллерах на предмет NPE -NullPointerException.class
  * в данном случае - Во всех контроллерах добавлена валидацию (проверки на null данных переданных пользователем)
@@ -39,8 +39,7 @@ public class GlobalExceptionHandler {
      * чтобы прописать какую-либо логику.
      * <p>
      * В данном случае при возникновении исключения IllegalArgumentException, метод exceptionHandler()
-     * отлавливает его и меняет ответ, а именно его статус и тело. Также в последней строке
-     * происходит логгирование.
+     * отлавливает его и меняет ответ, а именно его статус и тело.
      *
      * @param e
      * @param request

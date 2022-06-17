@@ -3,7 +3,7 @@ package ru.job4j.urlshortcut.model.dto;
 import lombok.Data;
 
 /**
- * Объект DTO ссылка приходящая для кончертирования
+ * Объект DTO ссылка приходящая для конвертирования
  */
 @Data
 public class Link {

@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 /**
- * Объект Сервис, для работы с Ссылками находящимимся в БД таблица-url
+ * Объект Сервис, для работы с Ссылками находящимися в БД таблица-url
  */
 @Service
 public class UrlService {
