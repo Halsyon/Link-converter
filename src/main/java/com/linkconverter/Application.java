@@ -1,4 +1,4 @@
-package ru.job4j.urlshortcut;
+package com.linkconverter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
-public class Job4jUrlShortcutApplication {
+public class Application {
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
@@ -14,7 +14,7 @@ public class Job4jUrlShortcutApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(Job4jUrlShortcutApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }
