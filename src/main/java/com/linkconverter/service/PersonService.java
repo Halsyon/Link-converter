@@ -1,10 +1,10 @@
-package ru.job4j.urlshortcut.service;
+package com.linkconverter.service;
 
+import com.linkconverter.model.dto.RegstrnStatus;
 import org.springframework.stereotype.Service;
-import ru.job4j.urlshortcut.model.Person;
-import ru.job4j.urlshortcut.model.Url;
-import ru.job4j.urlshortcut.model.dto.RegstrnStatus;
-import ru.job4j.urlshortcut.repository.PersonRepo;
+import com.linkconverter.model.Person;
+import com.linkconverter.model.Url;
+import com.linkconverter.repository.PersonRepo;
 
 import java.util.Optional;
 

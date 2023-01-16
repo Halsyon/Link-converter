@@ -1,13 +1,12 @@
-package ru.job4j.urlshortcut.controller;
+package com.linkconverter.controller;
 
+import com.linkconverter.service.PersonService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import org.springframework.web.bind.annotation.*;
-import ru.job4j.urlshortcut.model.Person;
-
-import ru.job4j.urlshortcut.service.PersonService;
+import com.linkconverter.model.Person;
 
 import javax.validation.Valid;
 import java.util.List;

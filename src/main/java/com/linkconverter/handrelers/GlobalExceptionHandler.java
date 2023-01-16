@@ -1,4 +1,4 @@
-package ru.job4j.urlshortcut.handrelers;
+package com.linkconverter.handrelers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;

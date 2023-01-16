@@ -1,4 +1,4 @@
-package ru.job4j.urlshortcut.model.dto;
+package com.linkconverter.model.dto;
 
 import lombok.Data;
 

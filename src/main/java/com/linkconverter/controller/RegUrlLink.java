@@ -1,15 +1,15 @@
-package ru.job4j.urlshortcut.controller;
+package com.linkconverter.controller;
 
+import com.linkconverter.model.dto.Code;
+import com.linkconverter.model.dto.Link;
+import com.linkconverter.service.PersonService;
+import com.linkconverter.service.UrlService;
 import org.apache.commons.validator.routines.UrlValidator;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
-import ru.job4j.urlshortcut.model.dto.Code;
-import ru.job4j.urlshortcut.model.dto.Link;
-import ru.job4j.urlshortcut.model.Url;
-import ru.job4j.urlshortcut.service.PersonService;
-import ru.job4j.urlshortcut.service.UrlService;
+import com.linkconverter.model.Url;
 
 /**
  * 3. Регистрация URL.

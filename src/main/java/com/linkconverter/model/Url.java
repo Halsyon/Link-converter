@@ -1,4 +1,4 @@
-package ru.job4j.urlshortcut.model;
+package com.linkconverter.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

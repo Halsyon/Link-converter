@@ -1,5 +1,8 @@
-package ru.job4j.urlshortcut.security;
+package com.linkconverter.security;
 
+import com.linkconverter.filter.JWTAuthenticationFilter;
+import com.linkconverter.filter.JWTAuthorizationFilter;
+import com.linkconverter.service.UserDetailsServiceImpl;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,12 +14,6 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.context.annotation.Bean;
-import ru.job4j.urlshortcut.filter.JWTAuthenticationFilter;
-import ru.job4j.urlshortcut.filter.JWTAuthorizationFilter;
-import ru.job4j.urlshortcut.service.UserDetailsServiceImpl;
-
-import static ru.job4j.urlshortcut.filter.JWTAuthenticationFilter.CONVERT_URL;
-import static ru.job4j.urlshortcut.filter.JWTAuthenticationFilter.SIGN_UP_URL;
 
 /**
  * -@EnableWebSecurity c целью активизировать безопасный режим работы в веб-приложении Спринг
@@ -36,9 +33,9 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, CONVERT_URL)
+                .antMatchers(HttpMethod.GET, JWTAuthenticationFilter.CONVERT_URL)
                 .permitAll()
-                .antMatchers(HttpMethod.POST, SIGN_UP_URL)
+                .antMatchers(HttpMethod.POST, JWTAuthenticationFilter.SIGN_UP_URL)
                 .permitAll()
                 .anyRequest().authenticated()
                 .and()

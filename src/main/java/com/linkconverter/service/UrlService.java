@@ -1,13 +1,13 @@
-package ru.job4j.urlshortcut.service;
+package com.linkconverter.service;
 
 import com.google.common.hash.Hashing;
+import com.linkconverter.model.dto.UrlStatistic;
 import org.apache.commons.validator.routines.UrlValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import ru.job4j.urlshortcut.model.Url;
-import ru.job4j.urlshortcut.model.dto.UrlStatistic;
-import ru.job4j.urlshortcut.repository.UrlRepo;
+import com.linkconverter.model.Url;
+import com.linkconverter.repository.UrlRepo;
 
 import java.nio.charset.StandardCharsets;
 import java.util.List;

@@ -1,12 +1,12 @@
-package ru.job4j.urlshortcut.controller;
+package com.linkconverter.controller;
 
+import com.linkconverter.service.UrlService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.job4j.urlshortcut.model.Url;
-import ru.job4j.urlshortcut.service.UrlService;
+import com.linkconverter.model.Url;
 
 
 /**

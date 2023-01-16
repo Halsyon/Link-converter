@@ -1,12 +1,10 @@
-package ru.job4j.urlshortcut.repository;
+package com.linkconverter.repository;
 
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.transaction.annotation.Transactional;
-import ru.job4j.urlshortcut.model.Url;
-
-import java.util.Optional;
+import com.linkconverter.model.Url;
 
 /**
  * ключом будет закодированное значение адреса, значением будет строка

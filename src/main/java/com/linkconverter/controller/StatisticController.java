@@ -1,10 +1,10 @@
-package ru.job4j.urlshortcut.controller;
+package com.linkconverter.controller;
 
+import com.linkconverter.model.dto.UrlStatistic;
+import com.linkconverter.service.UrlService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.job4j.urlshortcut.model.dto.UrlStatistic;
-import ru.job4j.urlshortcut.service.UrlService;
 
 import java.util.List;
 

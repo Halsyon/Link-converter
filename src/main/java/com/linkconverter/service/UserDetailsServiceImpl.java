@@ -1,12 +1,12 @@
-package ru.job4j.urlshortcut.service;
+package com.linkconverter.service;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import ru.job4j.urlshortcut.model.Person;
-import ru.job4j.urlshortcut.repository.PersonRepo;
+import com.linkconverter.model.Person;
+import com.linkconverter.repository.PersonRepo;
 
 import static java.util.Collections.emptyList;
 

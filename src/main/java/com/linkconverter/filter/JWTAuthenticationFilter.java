@@ -1,4 +1,4 @@
-package ru.job4j.urlshortcut.filter;
+package com.linkconverter.filter;
 
 import com.auth0.jwt.JWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -8,7 +8,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import ru.job4j.urlshortcut.model.Person;
+import com.linkconverter.model.Person;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
