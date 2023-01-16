@@ -8,11 +8,11 @@
         <version>2.4.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>ru.job4j</groupId>
-    <artifactId>job4j_url_shortcut</artifactId>
+    <groupId>com.linkconverter</groupId>
+    <artifactId>link_converter</artifactId>
     <version>1.0</version>
-    <name>job4j_url_shortcut</name>
-    <description>Demo project for Spring Boot</description>
+    <name>link_converter</name>
+    <description>The App link converter</description>
     <packaging>jar</packaging>
 
     <properties>
