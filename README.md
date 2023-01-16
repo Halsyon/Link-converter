@@ -1,19 +1,16 @@
-# url_shortcut
+# Link converter
 
+[![Build Status](https://app.travis-ci.com/Halsyon/Link-converte.svg?branch=master)](https://app.travis-ci.com/Halsyon/Link-converte)
+![GitHub top language](https://img.shields.io/github/languages/top/Halsyon/Link-converte?logo=java&logoColor=red)
+![GitHub last commit](https://img.shields.io/github/last-commit/Halsyon/Link-converte?logo=github)
 
-[![Build Status](https://app.travis-ci.com/SlartiBartFast-art/job4j_url_shortcut.svg?branch=master)](https://app.travis-ci.com/SlartiBartFast-art/job4j_url_shortcut)
-![GitHub top language](https://img.shields.io/github/languages/top/SlartiBartFast-art/job4j_url_shortcut?logo=java&logoColor=red)
-![GitHub last commit](https://img.shields.io/github/last-commit/SlartiBartFast-art/job4j_url_shortcut?logo=github)
-
-
-
-Приложение Сервис - UrlShortCut.
+Приложение Сервис - Link converter.
 
 Чтобы обеспечить безопасность пользователей, все ссылки на сайте заменяются ссылками на наш сервис.
  
 Сервис работает через REST API.
 
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_1.jpg)
+![Image of Arch](https://github.com/Halsyon/Link-converte/blob/master/image/Screenshot_1.jpg)
 
 
 Сервис позволяет обеспечить безопасность пользователей на сайте,
@@ -35,11 +32,11 @@ ______________________________________________
 - PostgreSQl  
 - Maven
 - Travis C.I.
------
 
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_9.jpg)
 
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_8.jpg)
+![Image of Arch](https://github.com/Halsyon/Link-converte/blob/master/image/Screenshot_9.jpg)
+
+![Image of Arch](https://github.com/Halsyon/Link-converte/blob/master/image/Screenshot_8.jpg)
 
 В приложении будет несколько запросов, функционал:
 
@@ -51,11 +48,11 @@ URL
 
 POST /registration
 в случае если пользователь регистрируется впервые
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_2.jpg)
+![Image of Arch](https://github.com/Halsyon/Link-converte/blob/master/image/Screenshot_2.jpg)
 
 Ответ от сервера, в случае если такой пользователь уже существует
 
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_3.jpg)
+![Image of Arch](https://github.com/Halsyon/Link-converte/blob/master/image/Screenshot_3.jpg)
 
 2. Авторизация.
 
@@ -64,7 +61,7 @@ POST /registration
 
 Этот ключ возвращается в блоке HEAD.
 
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_4.jpg)
+![Image of Arch](https://github.com/Halsyon/Link-converte/blob/master/image/Screenshot_4.jpg)
 
 3. Регистрация URL.
 
@@ -74,7 +71,7 @@ POST /registration
 Отправляем URL. POST /convert
 Получаем. Ответ от сервера - уникальный код.
 
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_5.jpg)
+![Image of Arch](https://github.com/Halsyon/Link-converte/blob/master/image/Screenshot_5.jpg)
 
 Ключ 4b7a2a11 ассоциирован с URL в БД
 
@@ -85,17 +82,17 @@ POST /registration
 
 GET /redirect/УНИКАЛЬНЫЙ_КОД
 
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_6.jpg)
+![Image of Arch](https://github.com/Halsyon/Link-converte/blob/master/image/Screenshot_6.jpg)
 
 5. Статистика.
 
 В сервисе считается количество вызовов каждого адреса.
 По сайту можно получить статистку всех адресов и количество вызовов этого адреса.
 
-вызов. GET /statistic
+Вызов. GET /statistic
 Ответ от сервера JSON.
 
-![Image of Arch](https://github.com/SlartiBartFast-art/job4j_url_shortcut/blob/master/image/Screenshot_7.jpg)
+![Image of Arch](https://github.com/Halsyon/Link-converte/blob/master/image/Screenshot_7.jpg)
 
 
 
